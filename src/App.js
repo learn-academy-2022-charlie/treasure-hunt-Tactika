@@ -9,6 +9,9 @@ class App extends Component {
       board: ["?", "?", "?", "?", "?", "?", "?", "?", "?"]
     }
   }
+  handleGamePlay = (index) => {
+    alert(index)
+  }
 
   render() {
     return(
@@ -20,6 +23,8 @@ class App extends Component {
           <Square 
             value={value} 
             key={index}
+            index={index}
+            handleGamePlay={this.handleGamePlay}
           />
           )
         })}
